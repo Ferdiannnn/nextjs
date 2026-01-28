@@ -1,7 +1,11 @@
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export default function Home() {
   return (
+    <>
+    <SpeedInsights />
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
@@ -179,5 +183,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
