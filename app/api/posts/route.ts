@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '@/lib/mongodb';
-import Post from '@/models/Post';
+import clientPromise from '@/lib/mongodb';
+
+const DB_NAME = 'nextjs_db';
+const COLLECTION = 'posts';
 
 export async function GET() {
   try {
-    await connectDB();
-    const posts = await Post.find().sort({ createdAt: -1 });
+    const client = await clientPromise;
+    const db = client.db(DB_NAME);
+    const posts = await db.collection(COLLECTION).find().sort({ createdAt: -1 }).toArray();
     return NextResponse.json(posts, { status: 200 });
   } catch (error) {
     console.error('Error fetching posts:', error);
@@ -15,17 +18,20 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    await connectDB();
+    const client = await clientPromise;
+    const db = client.db(DB_NAME);
     const body = await request.json();
 
-    const post = new Post({
+    const post = {
       title: body.title,
       content: body.content,
       author: body.author || 'Anonymous',
-    });
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
 
-    const savedPost = await post.save();
-    return NextResponse.json(savedPost, { status: 201 });
+    const result = await db.collection(COLLECTION).insertOne(post);
+    return NextResponse.json({ ...post, _id: result.insertedId }, { status: 201 });
   } catch (error) {
     console.error('Error creating post:', error);
     return NextResponse.json({ error: 'Failed to create post' }, { status: 500 });
