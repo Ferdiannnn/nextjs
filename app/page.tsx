@@ -8,6 +8,8 @@ export default function Home() {
       <Link href="/posts">Posts</Link>
       <br />
       <Link href="/albums">Albums</Link>
+      <br />
+      <Link href="/todolists">TodoList</Link>
     </>
 
   )
