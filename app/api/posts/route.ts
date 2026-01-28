@@ -9,7 +9,7 @@ export async function GET() {
     const client = await clientPromise;
     const db = client.db(DB_NAME);
     const posts = await db.collection(COLLECTION).find().sort({ createdAt: -1 }).toArray();
-    return NextResponse.json(posts, { status: 200 });
+    return NextResponse.json({ Data: posts }, { status: 200 });
   } catch (error) {
     console.error('Error fetching posts:', error);
     return NextResponse.json({ error: 'Failed to fetch posts' }, { status: 500 });
