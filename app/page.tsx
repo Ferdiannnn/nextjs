@@ -8,6 +8,7 @@ export default function Home() {
     <SpeedInsights />
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
+      <meta name="google-site-verification" content="_bb9YdofmZriPq78ryCcQkRSQdMWRRnQ_TVENohKp2Q" />
       <nav className="fixed w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -30,11 +31,10 @@ export default function Home() {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
             Hi, I'm
             <br />
-            <span className="text-gray-400">Your Name</span>
+            <span className="text-gray-400">Ferdian Susanto</span>
           </h1>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed">
-            I create elegant digital experiences through clean code and thoughtful design. 
-            Specialized in building modern web applications.
+            Laravel, Next.js, React, Tailwind CSS, TypeScript, and more.
           </p>
           
           {/* Social Links */}
