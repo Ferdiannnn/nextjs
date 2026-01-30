@@ -8,7 +8,7 @@ export default function Home() {
     <SpeedInsights />
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <meta name="google-site-verification" content="_bb9YdofmZriPq78ryCcQkRSQdMWRRnQ_TVENohKp2Q" />
+      <meta name="google-site-verification" content="mdnrco1aT1Ee7ZR7lcEzIBQzgb6_ZFpDo8" />
       <nav className="fixed w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
