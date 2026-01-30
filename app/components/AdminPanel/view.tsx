@@ -63,19 +63,36 @@ const products = [
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-08.jpg',
     imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
   },
+  {
+    id: 9,
+    name: 'Leather Bound Journal',
+    href: '#',
+    price: '$45',
+    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-08.jpg',
+    imageAlt: 'Leather bound journal with elastic band and ribbon bookmark.',
+  },
+  {
+    id: 10,
+    name: 'Wooden Desk Tray',
+    href: '#',
+    price: '$38',
+    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-08.jpg',
+    imageAlt: 'Wooden desk tray with beveled edges and rounded corners.',
+  }
+  
 ]
 
 const ViewAdminPanel = () => {
     return (
         <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <h1 className="text-2xl font-bold py-5 ps-5 mx-6" >Product Populer</h1>
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <h1 className="text-4xl font-bold py-5 ps-5 mx-6 " >Product Populer</h1>
             </div>
         <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
           {products.map((product) => (
               <a key={product.id} href={product.href} className="group">
               <img

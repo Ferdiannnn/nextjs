@@ -12,7 +12,7 @@ export default function Home() {
       <nav className="fixed w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold tracking-tight">PORTFOLIO</div>
+            <div className="text-2xl font-bold tracking-tight">HOME ME </div>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="text-gray-400 hover:text-white transition">About</a>
               <a href="#work" className="text-gray-400 hover:text-white transition">Work</a>
